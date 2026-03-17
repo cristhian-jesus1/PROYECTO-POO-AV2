@@ -3,8 +3,7 @@
 ## 📌 Descripción
 Juego de estrategia por turnos en consola desarrollado en C#.
 
-## 🧩 UML
-                           +----------------------+
+## 🧩 UML                 +----------------------+
                            |       Program        |
                            +----------------------+
                            | Main()               |
@@ -69,6 +68,7 @@ Juego de estrategia por turnos en consola desarrollado en C#.
 | EsImpacto()| | EstaHundido()    |
 | EsAgua()   | +------------------+
 +-----------+
+
 
 ## 🚢 Flota
 - Portaaviones (5)
