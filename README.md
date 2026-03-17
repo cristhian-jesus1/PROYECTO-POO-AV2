@@ -3,73 +3,9 @@
 ## 📌 Descripción
 Juego de estrategia por turnos en consola desarrollado en C#.
 
-## 🧩 UML                 +----------------------+
-                           |       Program        |
-                           +----------------------+
-                           | Main()               |
-                           +----------------------+
-                                      |
-                                      ▼
-                           +----------------------+
-                           |        Juego         |
-                           +----------------------+
-                           | jugador : Jugador    |
-                           | cpu : Cpu            |
-                           | render : Renderizador|
-                           | gestor : GestorGuard|
-                           +----------------------+
-                           | Iniciar()            |
-                           +----------+-----------+
-                                      |
-        _____________ ________________|_________________________
-       |              |                |                        |
-       ▼              ▼                ▼                        ▼
-
-+----------------+  +----------------+  +---------------------+  +----------------------+
-|    Jugador     |  |      Cpu       |  |    Renderizador     |  |   GestorGuardado    |
-+----------------+  +----------------+  +---------------------+  +----------------------+
-| nombre:string  |  |                |  |                     |  |                     |
-| tablero:Tablero|  |                |  |                     |  |                     |
-| disparos:int   |  |                |  |                     |  |                     |
-| aciertos:int   |  |                |  |                     |  |                     |
-| fallos:int     |  |                |  |                     |  |                     |
-+----------------+  +----------------+  +---------------------+  +----------------------+
-| Precision():dbl|  | ElegirObjetivo()| | MostrarBienvenida() |  | Guardar()           |
-| RegistrarDisp()|  | ColocarFlota()  | | MostrarTableros()   |  | Cargar()            |
-+--------+-------+  +--------▲-------+ | PedirCoordenada()    |  | Eliminar()          |
-         |                   |         | MostrarResultado()    |  +----------+----------+
-         |                   |         +----------+------------+             |
-         ▼                   |                    |                          ▼
-+----------------+          |                    ▼                +----------------------+
-|    Tablero     |          |           +----------------+       |   EstadoPartida     |
-+----------------+          |           |    Colores     |       +----------------------+
-| barcos:List    |          |           +----------------+       | datos               |
-+----------------+          |           | (constantes)   |       +----------------------+
-| TodosHundidos  |          |           +----------------+
-| BarcosRestantes|          |           +----------------+
-| ObtenerCasilla()|         |           |   ArteAscii    |
-| PuedeColocar() |          |           +----------------+
-| ColocarBarco() |          |           | (textos UI)    |
-| Disparar()     |          |           +----------------+
-+--------+-------+          |
-         |                  |
-    _____|______            |
-   |            |           |
-   ▼            ▼           |
-+-----------+ +-----------+ |
-|  Casilla  | |   Barco   | |
-+-----------+ +-----------+ |
-| fila:int  | | nombre:str| |
-| columna   | | tamanio   | |
-| disparada | | impactos  | |
-| barco     | | casillas  | |
-+-----------+ +-----------+ |
-| EstaVacia()| | RecibirImpacto() |
-| EsImpacto()| | EstaHundido()    |
-| EsAgua()   | +------------------+
-+-----------+
-
-
+## 🧩 UML                
+![alt UML](image.png)
+![alt UML](image-1.png)
 ## 🚢 Flota
 - Portaaviones (5)
 - Acorazado (4)
